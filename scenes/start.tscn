@@ -44,9 +44,6 @@ material = SubResource("StandardMaterial3D_ewcy1")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="CSGBox3D/StaticBody3D" unique_id=1995401660]
 shape = SubResource("BoxShape3D_jaeev")
 
-[node name="Camera3D" type="Camera3D" parent="." unique_id=1529291528]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5804739, 1.5253816, 8.301598)
-
 [node name="CharacterBody3D" type="CharacterBody3D" parent="." unique_id=1439826911]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.054165125, 0)
 script = ExtResource("1_jaeev")
@@ -59,3 +56,6 @@ shape = SubResource("CapsuleShape3D_jaeev")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.011784315, 0)
 size = Vector3(1, 2, 1)
 material = SubResource("StandardMaterial3D_u80x2")
+
+[node name="Camera3D" type="Camera3D" parent="CharacterBody3D" unique_id=1529291528]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.07163048, 1.4926155, 3.9138699)
