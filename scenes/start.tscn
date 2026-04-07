@@ -1,0 +1,61 @@
+[gd_scene format=3 uid="uid://bowl7ycujho06"]
+
+[ext_resource type="Script" uid="uid://o1o2ntgnawxm" path="res://scripts/player.gd" id="1_jaeev"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ewcy1"]
+sky_top_color = Color(0.3452074, 0.38938594, 0.8386879, 1)
+sky_horizon_color = Color(0.61236537, 0.61077785, 0.76207495, 1)
+ground_bottom_color = Color(0.1903322, 0.13980344, 0.29568988, 1)
+ground_horizon_color = Color(0.61236537, 0.61077785, 0.76207495, 1)
+
+[sub_resource type="Sky" id="Sky_jaeev"]
+sky_material = SubResource("ProceduralSkyMaterial_ewcy1")
+
+[sub_resource type="Environment" id="Environment_u80x2"]
+background_mode = 2
+sky = SubResource("Sky_jaeev")
+tonemap_mode = 2
+glow_enabled = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ewcy1"]
+albedo_color = Color(1, 1, 0, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_jaeev"]
+size = Vector3(10, 1, 8.5)
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_jaeev"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_u80x2"]
+albedo_color = Color(1, 0, 0, 1)
+
+[node name="Node3D" type="Node3D" unique_id=906789754]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=481501692]
+environment = SubResource("Environment_u80x2")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=1259236629]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5045407, -0.24145508)
+use_collision = true
+size = Vector3(10, 1, 8.504883)
+material = SubResource("StandardMaterial3D_ewcy1")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="CSGBox3D" unique_id=1407182968]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CSGBox3D/StaticBody3D" unique_id=1995401660]
+shape = SubResource("BoxShape3D_jaeev")
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1529291528]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5804739, 1.5253816, 8.301598)
+
+[node name="CharacterBody3D" type="CharacterBody3D" parent="." unique_id=1439826911]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.054165125, 0)
+script = ExtResource("1_jaeev")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D" unique_id=476889975]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.96753216, 0)
+shape = SubResource("CapsuleShape3D_jaeev")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="CharacterBody3D/CollisionShape3D" unique_id=684996036]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.011784315, 0)
+size = Vector3(1, 2, 1)
+material = SubResource("StandardMaterial3D_u80x2")
