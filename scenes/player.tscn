@@ -10,18 +10,20 @@
 
 [node name="Player" type="CharacterBody3D" unique_id=1235496463]
 script = ExtResource("1_3vyb7")
+speed = null
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=849706469]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.96753216, 0)
 shape = SubResource("CapsuleShape3D_jaeev")
 
-[node name="SpringArm3D" type="SpringArm3D" parent="." unique_id=1739408694]
+[node name="CamerRig" type="SpringArm3D" parent="." unique_id=1739408694]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5390211, 0)
+top_level = true
 shape = SubResource("SphereShape3D_qhqgy")
 spring_length = 3.345
 script = ExtResource("2_qhqgy")
 
-[node name="Camera3D" type="Camera3D" parent="SpringArm3D" unique_id=1613380084]
+[node name="Camera3D" type="Camera3D" parent="CamerRig" unique_id=1613380084]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3.5)
 
 [node name="Mesh" parent="." unique_id=1397943529 instance=ExtResource("2_g2els")]
