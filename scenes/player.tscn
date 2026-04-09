@@ -2,8 +2,11 @@
 
 [ext_resource type="Script" uid="uid://o1o2ntgnawxm" path="res://scripts/player.gd" id="1_3vyb7"]
 [ext_resource type="PackedScene" uid="uid://d21x38lgoy4nv" path="res://assets/hero_male.glb" id="2_g2els"]
+[ext_resource type="Script" uid="uid://cdjl0ckb8d6wm" path="res://scripts/camera_rig.gd" id="2_qhqgy"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_jaeev"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_qhqgy"]
 
 [node name="Player" type="CharacterBody3D" unique_id=1235496463]
 script = ExtResource("1_3vyb7")
@@ -14,7 +17,9 @@ shape = SubResource("CapsuleShape3D_jaeev")
 
 [node name="SpringArm3D" type="SpringArm3D" parent="." unique_id=1739408694]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5390211, 0)
+shape = SubResource("SphereShape3D_qhqgy")
 spring_length = 3.345
+script = ExtResource("2_qhqgy")
 
 [node name="Camera3D" type="Camera3D" parent="SpringArm3D" unique_id=1613380084]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3.5)
