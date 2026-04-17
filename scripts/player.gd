@@ -1,6 +1,7 @@
 extends CharacterBody3D
 @onready var anim_player: AnimationPlayer = $Mesh/AnimationPlayer
-
+@onready var anim_tree: AnimationTree = $AnimationTree
+var last_lean := 0.0
 
 ## Determines how fast the player moves
 @export var speed := 5.0
@@ -36,11 +37,16 @@ func _physics_process(delta: float) -> void:
 	const BLEND_SPEED := 0.2
 	
 	if current_speed > RUN_SPEED : 
-		anim_player.play("freehand_run", BLEND_SPEED)
+		anim_tree.set("parameters/movement/transition_request","run")
+		var lean := direction.dot(global_basis.x)
+		last_lean = lerpf(last_lean, lean, 0.3)
+		anim_tree.set("parameters/run_lean/add_amount", last_lean)
 	elif current_speed > 0.0:
-		anim_player.play("freehand_walk", BLEND_SPEED, lerp(0.5, 1.25, current_speed/RUN_SPEED))
+		anim_tree.set("parameters/movement/transition_request","walk")
+		var walk_speed:= lerpf(0.5,1.75, current_speed/RUN_SPEED)
+		anim_tree.set("parameters/walk_speed/scale", walk_speed)
 	else: 
-		anim_player.play("freehand_idle")
+		anim_tree.set("parameters/movement/transition_request","idle")
 
 func turn_to(direction: Vector3) -> void:
 	if direction.length() > 0:

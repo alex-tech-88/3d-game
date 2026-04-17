@@ -69,6 +69,8 @@ view_right={
 [physics]
 
 3d/physics_engine="Jolt Physics"
+3d/default_gravity=18.0
+common/physics_interpolation=true
 
 [rendering]
 
