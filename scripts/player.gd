@@ -36,7 +36,11 @@ func _physics_process(delta: float) -> void:
 	const RUN_SPEED := 3.5
 	const BLEND_SPEED := 0.2
 	
-	if current_speed > RUN_SPEED : 
+	if not is_on_floor():
+		anim_tree.set("parameters/movement/transition_request","fall")
+		
+	
+	elif current_speed > RUN_SPEED : 
 		anim_tree.set("parameters/movement/transition_request","run")
 		var lean := direction.dot(global_basis.x)
 		last_lean = lerpf(last_lean, lean, 0.3)
