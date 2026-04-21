@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://c2ou2sphup8y3" path="res://scenes/player.tscn" id="1_u80x2"]
 [ext_resource type="PackedScene" uid="uid://hn37bghtbphs" path="res://assets/test_level.glb" id="2_u80x2"]
+[ext_resource type="AudioStream" uid="uid://cy4nvvf3lejcq" path="res://Audio/Music/temple.mp3" id="3_bodal"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ewcy1"]
 sky_top_color = Color(0.3452074, 0.38938594, 0.8386879, 1)
@@ -26,3 +27,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.054165125, 0)
 
 [node name="test_level" parent="." unique_id=1060063934 instance=ExtResource("2_u80x2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.054165125, 0)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=796101905]
+stream = ExtResource("3_bodal")
+autoplay = true
+bus = &"Music"
