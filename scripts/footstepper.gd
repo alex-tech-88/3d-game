@@ -1,11 +1,17 @@
-extends Node
+extends AudioStreamPlayer3D
 
+@onready var character: CharacterBody3D = get_parent()
 
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
+func play_footstep() -> void:
+	if not character.is_on_floor():
+		return
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+	for index in character.get_slide_collision_count():
+		var col := character.get_slide_collision(index)
+		if col.get_normal() == character.get_floor_normal():
+			var collider := col.get_collider()
+			if collider is WorldSounds:
+				var info : WorldSounds = collider
+				stream = info.footstep_sounds
+				break
+	play()
