@@ -1,3 +1,41 @@
 # Godot 4+ specific ignores
 .godot/
 /android/
+
+# Godot-specific ignores
+.import/
+export.cfg
+export_credentials.cfg
+export_presets.cfg
+
+# Imported translations (auto-generated from CSV)
+*.translation
+
+# Mono-specific ignores (C# support)
+.mono/
+data_*/
+mono_crash.*.json
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+.Spotlight-V100
+.Trashes
+
+# Windows (если работаешь в команде)
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Linux
+*~
+.nfs*
+
+# Android build artifacts
+*.apk
+*.aab
+android/build/
