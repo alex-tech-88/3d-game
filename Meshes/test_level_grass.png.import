@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://rhs8d4ojrums"
-path.s3tc="res://.godot/imported/hero_male_hero2.png-6a3660a22b8f8d909b85edb8e6e182f3.s3tc.ctex"
+uid="uid://bmre32l7qadoh"
+path.s3tc="res://.godot/imported/test_level_grass.png-e37b29420a4dd920f07311a72087d455.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "e589c230470a72acebc34f250f840383"
+"md5": "a947923c666d39fb1f087b73d2d8c082"
 }
 
 [deps]
 
-source_file="res://assets/hero_male_hero2.png"
-dest_files=["res://.godot/imported/hero_male_hero2.png-6a3660a22b8f8d909b85edb8e6e182f3.s3tc.ctex"]
+source_file="res://Meshes/test_level_grass.png"
+dest_files=["res://.godot/imported/test_level_grass.png-e37b29420a4dd920f07311a72087d455.s3tc.ctex"]
 
 [params]
 

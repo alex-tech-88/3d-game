@@ -8,21 +8,29 @@
 
 config_version=5
 
+[animation]
+
+compatibility/default_parent_skeleton_in_mesh_instance_3d=true
+
 [application]
 
-config/name="3D"
-run/main_scene="uid://bowl7ycujho06"
+config/name="Zelda Wannabe REAL"
+run/main_scene="res://Scenes/start.tscn"
 config/features=PackedStringArray("4.6", "Forward Plus")
-run/max_fps=144
 config/icon="res://icon.svg"
 
-[audio]
+[autoload]
 
-buses/default_bus_layout="uid://mxbegw44f481"
+PlayerStates="*res://Scripts/player_states/player_states.gd"
 
 [debug]
 
 gdscript/warnings/untyped_declaration=2
+
+[display]
+
+window/size/viewport_width=1920
+window/size/viewport_height=1080
 
 [input]
 
@@ -50,16 +58,6 @@ move_backward={
 , Object(InputEventJoypadMotion,"resource_local_to_scene":false,"resource_name":"","device":-1,"axis":1,"axis_value":1.0,"script":null)
 ]
 }
-view_up={
-"deadzone": 0.2,
-"events": [Object(InputEventJoypadMotion,"resource_local_to_scene":false,"resource_name":"","device":-1,"axis":3,"axis_value":-1.0,"script":null)
-]
-}
-view_down={
-"deadzone": 0.2,
-"events": [Object(InputEventJoypadMotion,"resource_local_to_scene":false,"resource_name":"","device":-1,"axis":3,"axis_value":1.0,"script":null)
-]
-}
 view_left={
 "deadzone": 0.2,
 "events": [Object(InputEventJoypadMotion,"resource_local_to_scene":false,"resource_name":"","device":-1,"axis":2,"axis_value":-1.0,"script":null)
@@ -70,10 +68,19 @@ view_right={
 "events": [Object(InputEventJoypadMotion,"resource_local_to_scene":false,"resource_name":"","device":-1,"axis":2,"axis_value":1.0,"script":null)
 ]
 }
+view_up={
+"deadzone": 0.2,
+"events": [Object(InputEventJoypadMotion,"resource_local_to_scene":false,"resource_name":"","device":-1,"axis":3,"axis_value":-1.0,"script":null)
+]
+}
+view_down={
+"deadzone": 0.2,
+"events": [Object(InputEventJoypadMotion,"resource_local_to_scene":false,"resource_name":"","device":-1,"axis":3,"axis_value":1.0,"script":null)
+]
+}
 
 [physics]
 
-3d/physics_engine="Jolt Physics"
 3d/default_gravity=18.0
 common/physics_interpolation=true
 

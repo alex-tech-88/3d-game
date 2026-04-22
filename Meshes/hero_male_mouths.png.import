@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://7f6n7a6lcoi"
-path.s3tc="res://.godot/imported/test_level_dirt.png-eb8e853d6d98f749e0fb0130c107068d.s3tc.ctex"
+uid="uid://yg1uhhp21y57"
+path.s3tc="res://.godot/imported/hero_male_mouths.png-23b1718100fe03cfc1d383662d96945f.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "56014a825e21f2b837e279cc4d9537c2"
+"md5": "7ebef6f33ae171cb7d1e671c6405096b"
 }
 
 [deps]
 
-source_file="res://assets/test_level_dirt.png"
-dest_files=["res://.godot/imported/test_level_dirt.png-eb8e853d6d98f749e0fb0130c107068d.s3tc.ctex"]
+source_file="res://Meshes/hero_male_mouths.png"
+dest_files=["res://.godot/imported/hero_male_mouths.png-23b1718100fe03cfc1d383662d96945f.s3tc.ctex"]
 
 [params]
 

@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://u6qi6ah2axq5"
-path.s3tc="res://.godot/imported/test_level_gray_dark.png-396514140f45251d0c9f6b6b629ca8b1.s3tc.ctex"
+uid="uid://cxho8n6g6yio8"
+path.s3tc="res://.godot/imported/test_level_snow.png-7650d8900d336ebdeec0b778f0858ef1.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "a7fc0f7705421274975c024b8e83afd3"
+"md5": "15b0d155871ee632b0b9c52237f47f4c"
 }
 
 [deps]
 
-source_file="res://assets/test_level_gray_dark.png"
-dest_files=["res://.godot/imported/test_level_gray_dark.png-396514140f45251d0c9f6b6b629ca8b1.s3tc.ctex"]
+source_file="res://Meshes/test_level_snow.png"
+dest_files=["res://.godot/imported/test_level_snow.png-7650d8900d336ebdeec0b778f0858ef1.s3tc.ctex"]
 
 [params]
 

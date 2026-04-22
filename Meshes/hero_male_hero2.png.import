@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bxthc3h5ceeec"
-path.s3tc="res://.godot/imported/test_level_wood.png-7ace1523352962f9b4af881e21d1037c.s3tc.ctex"
+uid="uid://d1bjcj03auyqo"
+path.s3tc="res://.godot/imported/hero_male_hero2.png-03664f64093313c4e8975d4e2e59fe81.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "c3943ab3e9ff1e4c0ef9c15f045e1e5c"
+"md5": "e589c230470a72acebc34f250f840383"
 }
 
 [deps]
 
-source_file="res://assets/test_level_wood.png"
-dest_files=["res://.godot/imported/test_level_wood.png-7ace1523352962f9b4af881e21d1037c.s3tc.ctex"]
+source_file="res://Meshes/hero_male_hero2.png"
+dest_files=["res://.godot/imported/hero_male_hero2.png-03664f64093313c4e8975d4e2e59fe81.s3tc.ctex"]
 
 [params]
 
